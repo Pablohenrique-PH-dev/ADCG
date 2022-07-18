@@ -1,0 +1,1 @@
+web: gunicorn ADCG_UMADCG.wsgi --log-file -

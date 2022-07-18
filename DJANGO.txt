@@ -1,0 +1,68 @@
+CRIAÇÃO DE PROJETO DJANGO
+
+
+1 - CRIAR UM NOVO PROJETO NO PYCHARM EM AMBIENTE VIRTUAL
+2 - CRIAR UM ARQUIVO .TXT PARA ESCREVER O QUE VOCÊ QUER CONSTRUIR E EXTRUTURAR
+3 - NO TERMINAL DO PYCHARM - INSTALAR  - pip install django 
+4 - NO TERMINALDO PYCHARM - RODAR CODIGO - "django-admin startproject nomedoprojeto ."
+
+comandos para rodar programa do servidor no seu pc -  python manage.py runserver
+
+atualizar banco de dados - python manage.py makemigrations    
+atualizar banco de dados - python manage.py migrate
+                         
+sair do servido - teclas ( Ctrl + c )
+
+5- criar app - NO TERMINALDO PYCHARM - RODAR CODIGO -django-admin startapp estudo
+
+6 - criando um SuperUser - python manage.py createsuperuser
+
+   - usuario   pablo_henrique_santos
+   - email  pablohenriquesantosdasilva@gmail.com
+   - senha  ph7541ss
+   - repete a senha  ph7541ss
+
+7 - comandos para rodar programa do servidor no seu pc -  python manage.py runserver
+  - verificar em /admin e testar se usuario consegue acessar
+
+8 - na pasta do projeto no pucharm clica no arquivo setting.py e em INSTALLED_APPS inclui o nome do app criado no ultimo item da lista
+  - exemplo 'estudo',
+
+9 - criar um arquivo 'urls.py' na pasta do app criado acima
+
+10 - na pasta no pycharm do projeto principal clicar em 'urls.py' e ao abrir fazer as seguintes alterações
+
+   - from django.urls import path, include   - incluir o include
+   - path('/', include('estudo.urls'))       - colocar o nome do app e deixar a '/',include vazia
+
+11 - comentar a linha no arquivo principal urls # path('/', include('estudo.urls'))
+
+atualizar banco de dados - python manage.py makemigrations    
+atualizar banco de dados - python manage.py migrate
+
+12 - no arquivo admin.py no app inserir as seguites linhas
+
+	from .models import Estudo  # Filme
+
+	# Register your models here.
+	admin.site.register(Estudo) # Filme
+
+13 - inserir no arquivo models.py um metodo abaixo
+
+        def __str__(self):           # para aparecerer o titulo do filme
+        return self.titulo          
+
+
+
+Configurando pastas static e media  - continuar anotações a partir dessa aula
+
+Criando o navbar e editando html com tailwind
+Editando a homepage
+
+
+obs: modificar cor da fonte no formulario de cadastro de usuarios
+
+
+jessica_jessica_2022@gmail.com
+
+jb12345ss

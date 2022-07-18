@@ -1,0 +1,219 @@
+{% load static %}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/legado2.png' %}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Workshop</title>
+
+</head>
+
+<style>
+
+.menu{
+    background-image: url('../images/capa.jpg');
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    position: sticky;
+    color: #000;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 10px;
+}
+
+.menu .navegação a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: backgroud;
+}
+
+.menu .navegação a:not(:last-child){
+    margin-right: 0px;
+}
+
+.menu .navegação a:hover{
+    background: red;
+}
+
+.bt{
+    display: none;
+}
+
+#bt_menu{
+    z-index: 3;
+    display: none;
+
+}
+
+
+.link {
+
+    visibility:hidden;
+
+}
+
+@media (max-width:10px){
+
+    .menu{
+    background-image: url('../images/capa.jpg');
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu{
+    position: sticky;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 30px;
+
+}
+
+.menu .navegação a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 2px 5px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: backgroud;
+
+}
+
+.menu .navegação a:not(:last-child){
+    margin-right: 2px;
+}
+
+.menu .navegação a:hover{
+    background: red;
+}
+
+.bt{
+    display: none;
+}
+
+#bt_menu{
+    z-index: 3;
+    display: none;
+
+}
+
+
+.link {
+
+    visibility:hidden;
+
+}
+
+
+
+
+
+
+
+
+
+</style>
+{% endblock %}
+
+<nav class="flex text-gray-100 justify-between items-center py-3 px-4 fixed w-full z-50 ">
+        <div class="w-96">
+            <a href='/'>
+            <img src="{% static 'images/legado2.png' %}" alt="logo" class="w-12/12">
+            </a>
+        </div>
+
+        {% if user.is_authenticated %}
+        <nav class="menu" class="media-icons">
+        <div class="navegação">
+            <a href='/sobre'>SOBRE</a>
+            <a href='/estudos'>ESTUDOS</a>
+            <a href='/midias'>MÍDIAS</a>
+            <a class="link"  ></a>
+            <a class="link" ></a>
+            <a class="link" ></a>
+
+            <a href="https://www.facebook.com/search/top?q=assembleia%20de%20deus%20campo%20grande" target="_blank"><i
+                class="fab fa-facebook-f fa-1x"></i></a>
+            <a href="https://www.instagram.com/adcampogrande/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
+            <a href="https://www.youtube.com/c/ADCampoGrande" target="_blank"><i class='fab fa-youtube fa-1x'></i></a>
+            <a href="https://chat.whatsapp.com/J2HmDYHYZiNKhWEJaN6wqr"
+               target="_blank"><i class='fab fa-whatsapp fa-1x'></i></a>
+
+
+        </div>
+
+        <label class="bt" for="bt_menu">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+    </nav>
+        {% endif %}
+
+
+        <div class="w-6/12 flex flex-nowrap justify-end">
+            {% if user.is_authenticated %}
+              <div class="mr-2">
+                  <form method="get" action="{% url 'estudo:pesquisaestudo' %}">
+                      <input class="py-1 px-2 rounded-md text-black" name="query" value="" type="text" placeholder="Pesquisar...">
+                      <input type="submit" value="">
+                  </form>
+              </div>
+                {% endif %}
+              <div class="mr-2">
+                  {% if user.is_authenticated %}
+                  <a href="{% url 'estudo:logout' %}" class="">
+                    <button class='bg-red-600 py-1 px-3 text-white rounded-md'>
+                        Sair
+                    </button>
+                  </a>
+                  {% else %}
+                  <a href="{% url 'estudo:logout' %}" class="">
+                    <button class='bg-red-600 py-1 px-3 text-white rounded-md'>
+                        Login
+                    </button>
+                  </a>
+                  {% endif %}
+              </div>
+                {% if user.is_authenticated %}
+                <div class="mr-2">
+                <a href="{% url 'estudo:editarperfil' user.pk %}" class="">
+                    <button class='bg-red-600 py-1 px-3 text-white rounded-md'>
+                        Editar Perfil
+                    </button>
+                </a>
+              </div>
+                {% endif %}
+        </div>
+
+</nav>

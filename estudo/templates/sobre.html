@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+Fazer Login
+{% endblock %}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/perfil.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Workshop</title>
+
+</head>
+
+<style>
+
+
+footer{
+
+    padding: 40px;
+    text-align: left;
+    top: 200px;
+
+}
+
+.picture{
+    width: 300px;
+    position: relative;
+    margin-left: 1050px;
+    top: 200px;
+
+}
+
+.description{
+    display: inline-block;
+    text-align: left;
+    color: white;
+    max-width: 40%;
+    margin-left: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: -250px;
+}
+
+.description p, .description h3{
+    margin-bottom: 20px;
+}
+
+.description h3{
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+/* media-icons -   icone de midia social no fina da pagina */
+
+
+.media-icons{
+
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.media-icons a{
+    position: relative;
+    color: red;
+    font-size: 30px;
+    transition: 0.3s;
+    transition-property: transform;
+    top:-80px;
+}
+
+.media-icons a:not(:last-child){
+    margin-right: 80px;
+
+}
+
+.media-icons a:hover{
+    transform: scale(1.5);
+}
+
+
+
+/* --------------------------------------------------------------------*/
+
+.espaço-no-final{
+    background-color: none;
+   margin: auto;
+   height: 40px;
+   width: auto;
+
+}
+
+
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+    <header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase   flex justify-center items-center bg-no-repeat"
+            style="background-image: url('{% static 'images/1111.jpg' %}');">
+        <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+
+             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+            name="b_b8591ccffaf2b37f26c115c2d_8d1381ed15" tabindex="-1" value=""></div>
+    <footer>
+        <img class="picture" src="{% static 'images/legado1.png' %}">
+        <div class="description">
+            <h3>LEGADO</h3>
+            <p>Jesus Cristo é o Salvador do mundo e o Filho de Deus.
+                Ele é nosso Redentor. Cada um desses títulos aponta para a verdade de que Jesus Cristo
+                é o único caminho pelo qual poderemos voltar a viver com nosso Pai Celestial.  </p>
+
+            <p> O legado espiritual que Jesus nos despertou para as coisas espirituais,
+                pois até antes do seu nascimento, o homem estava distanciado de Deus,
+                e Jesus veio para reconciliarmo-nos com Deus, e com Cristo hoje estamos assentados
+                nas regiões celestiais e temos todas as bênçãos espirituais em Cristo a nosso dispor.</p>
+
+
+            <div>
+                <ul>
+                   <li> 🎓 Cursando desenvolvimento de software Full Stack em Python | HTML | JavaScript | CSS</li>
+                   <li>  🎓 Cursando Graduação em Engenharia de Software</li>
+
+
+                </ul>
+
+
+
+            </div>
+        </div>
+
+    </footer>
+    <div class="media-icons">
+        <a href="https://www.facebook.com/search/top?q=assembleia%20de%20deus%20campo%20grande" target="_blank"><i
+                class="fab fa-facebook-f fa-1x"></i></a>
+        <a href="https://www.instagram.com/adcampogrande/" target="_blank"><i class="fab fa-instagram fa-1x "></i></a>
+        <a href="https://www.youtube.com/c/ADCampoGrande" target="_blank"><i class='fab fa-youtube fa-1x'></i></a>
+        <a href="https://chat.whatsapp.com/J2HmDYHYZiNKhWEJaN6wqr" target="_blank"><i class='fab fa-whatsapp fa-1x'></i></a>
+    </div>
+
+
+
+
+        </div>
+    </header>
+
+<!--
+    <footer class=" px-5 py-10 ">
+        <ul class="flex justify-between items-center">
+
+            <li>&copy; 2022</li>
+            <li> Feito com Python (Django)</li>
+            <li><img src="{% static 'images/pablo.png' %}" class="w-8/12" alt=""> </li>
+        </ul>
+    </footer>
+
+-->
+
+{% endblock %}

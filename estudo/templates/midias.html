@@ -1,0 +1,545 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+Fazer Login
+{% endblock %}
+
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/perfil.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Workshop</title>
+
+</head>
+
+
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: -10px;
+  background-color: #000;
+}
+h1 {
+  font-family: Arial;
+  color: red;
+  text-align: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+
+
+}
+.wrapper section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 20px 0;
+  top:10px;
+
+
+}
+.wrapper section .item {
+  padding: 0 2px;
+  transition: 250ms all;
+}
+.wrapper section .item:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+.wrapper section a {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  background: black;
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+.wrapper section a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+.wrapper section a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+@media only screen and (max-width: 600px) {
+  a.arrow__btn {
+    display: none;
+  }
+}
+
+.wrapper1 {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+
+}
+.wrapper1 section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 30px 0;
+  top:0px;
+
+
+}
+.wrapper1 section .item {
+  padding: 0 2px;
+  transition: 250ms all;
+}
+.wrapper1 section .item:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+.wrapper1 section a {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  background: black;
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+.wrapper1 section a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+.wrapper1 section a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+@media only screen and (max-width: 600px) {
+  a.arrow__btn {
+    display: none;
+  }
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+
+}
+.wrapper2 section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 40px 0;
+  top:0px;
+
+
+}
+.wrapper2 section .item {
+  padding: 0 2px;
+  transition: 250ms all;
+}
+.wrapper2 section .item:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+.wrapper2 section a {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  background: black;
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+.wrapper2 section a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+.wrapper2 section a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+@media only screen and (max-width: 600px) {
+  a.arrow__btn {
+    display: none;
+  }
+}
+
+/* media-icons -   icone de midia social no fina da pagina */
+
+
+
+
+
+
+
+
+/*     videos      */
+.video{
+    overflow: hidden;
+    height: 700px;
+    width: 1200px;
+    margin-left: 360px;
+    display: inline;
+}
+
+
+
+
+</style>
+
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<br><br><br><br>
+
+<div class="wrapper">
+  <section id="section1">
+    <a href="#section3" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="{% static 'images/midia16.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia17.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia18.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia19.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia20.jpg' %}">
+  </div>
+    <a href="#section2" class="arrow__btn">›</a>
+  </section>
+  <section id="section2">
+    <a href="#section1" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="{% static 'images/midia6.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia7.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia8.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia9.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia10.jpg' %}">
+  </div>
+    <a href="#section3" class="arrow__btn">›</a>
+  </section>
+  <section id="section3">
+    <a href="#section2" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="{% static 'images/midia11.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia12.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia13.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia14.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia15.jpg' %}">
+    </div>
+    <a href="#section1" class="arrow__btn">›</a>
+  </section>
+</div>
+
+
+<div class="wrapper1">
+  <section id="section4">
+    <a href="#section6" class="arrow__btn">‹</a>
+     <div class="item">
+     <img src="{% static 'images/midia0.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia2.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia3.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia4.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia5.jpg' %}">
+  </div>
+    <a href="#section5" class="arrow__btn">›</a>
+  </section>
+  <section id="section5">
+    <a href="#section4" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="{% static 'images/midia21.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia22.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia23.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia24.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia25.jpg' %}">
+    </div>
+    <a href="#section6" class="arrow__btn">›</a>
+  </section>
+  <section id="section6">
+    <a href="#section5" class="arrow__btn">‹</a>
+    <div class="item">
+     <img src="{% static 'images/midia26.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia27.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia28.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia29.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia30.jpg' %}">
+    </div>
+    <a href="#section4" class="arrow__btn">›</a>
+  </section>
+</div>
+
+
+<div class="wrapper2">
+  <section id="section7">
+    <a href="#section9" class="arrow__btn">‹</a>
+     <div class="item">
+     <img src="{% static 'images/midia31.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia32.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia33.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia34.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia35.jpg' %}">
+  </div>
+    <a href="#section8" class="arrow__btn">›</a>
+  </section>
+  <section id="section8">
+    <a href="#section7" class="arrow__btn">‹</a>
+    <div class="item">
+     <img src="{% static 'images/midia36.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia37.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia38.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia39.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia40.jpg' %}">
+    </div>
+    <a href="#section9" class="arrow__btn">›</a>
+  </section>
+  <section id="section9">
+    <a href="#section8" class="arrow__btn">‹</a>
+    <div class="item">
+     <img src="{% static 'images/midia41.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia42.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia43.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia44.jpg' %}">
+  </div>
+    <div class="item">
+    <img src="{% static 'images/midia45.jpg' %}">
+    </div>
+    <a href="#section7" class="arrow__btn">›</a>
+  </section>
+</div>
+
+<!--
+    <a href="http://127.0.0.1:5500/index.html">
+        <div class="logo">
+
+        </div>
+    </a>
+-->
+    <!--
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">
+
+
+        <div class="bt_menu" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+    </label>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styte.css">
+    <link rel="stylesheet" href="https://unpkg.com/swipe/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swipe/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swipe/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <h1>Netflix</h1>
+    <div class="Netflix">
+        <h2>Os melhores Filmes</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="Netflix">
+         <h2>As melhores Series</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            sliderPerView: 6,
+            spaceBetween:40,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlack: true,
+            pagination:{
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+              nextE1: '.swiper-button-next',
+              prevE1: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
+

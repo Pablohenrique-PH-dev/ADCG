@@ -1,0 +1,1260 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+Fazer Login
+{% endblock %}
+
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/perfil.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>Workshop</title>
+
+</head>
+
+
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: #000;
+}
+h1 {
+  font-family: Arial;
+  color: red;
+  text-align: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.wrapper section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 200px 0;
+}
+.wrapper section .item {
+  padding: 0 2px;
+  transition: 250ms all;
+}
+.wrapper section .item:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+.wrapper section a {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  background: black;
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+.wrapper section a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+.wrapper section a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+@media only screen and (max-width: 600px) {
+  a.arrow__btn {
+    display: none;
+  }
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.container{
+    max-width: 10000px;
+    margin: auto;
+}
+
+header{
+
+    background-color: red;
+    text-align: center;
+    color: white;
+    padding: 0PX;
+    background-image: url('../images/capa.jpg');
+}
+
+
+
+
+
+
+
+
+
+/*
+pablo mofificação hhhh
+*/
+
+/*  animação display linha de baixo */
+
+
+
+/* --------------------------------------- */
+
+
+
+
+
+/*   modificação painel que aparece abaixo do menu */
+
+section{
+    height: 800PX;
+    padding: 0px;
+    background-image: url('../images/capa.jpg');
+    background-size: cover; /* imagem preenche todo o cenário */
+    overflow: hidden;  /* imagem preenche todo o cenário idependente do float */
+}
+
+
+.picturePP{
+    top: 0px;
+
+    width: 2000px;
+    left: 0px;
+    height: 800px;
+    position: absolute;
+
+
+
+}
+
+
+
+.footerPP{
+    top: 120px;
+    background-color: none;
+    padding: 40px;
+    text-align: left;
+    width: auto;
+    position: relative;
+}
+
+
+
+.descriptionPP{
+
+    display: inline-block;
+    text-align: center;
+    color: rgb(241, 18, 18);
+    max-width: 50%;
+    margin-left: 380px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
+
+.descriptionPP .PP, .descriptionPP {
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+
+
+.formContainer{
+        max-width: 230px;
+        background-color: #FFFFFFBB;
+        padding: 20PX;
+
+
+    }
+
+
+
+.title{
+    font-size: 26PX;
+}
+
+
+h2{
+    font-size: 16px;
+}
+
+.mb{
+    margin-bottom: 15px;
+}
+
+
+
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('../images/arrow.jpg');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+}
+
+/*  TELA DO MEU NOTEBOOK  */
+
+@media (max-width:10px){
+
+    section{
+
+        padding: 20px;
+        background-image: url('../images/ANO_DA_MULTIPLICAÇÃO_NOTEBOOK.png');
+        background-size: cover; /* imagem preenche todo o cenário */
+        overflow: hidden;  /* imagem preenche todo o cenário idependente do float */
+    }
+
+
+
+}
+
+
+
+
+
+
+/*   ------------------------------------------- */
+
+
+
+/*  novo modificação painel que aparece abaixo do menu */
+
+.title{
+    font-size: 26PX;
+}
+
+
+h2{
+    font-size: 16px;
+}
+
+.mb1{
+    margin-bottom: 15px;
+}
+
+
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('../images/arrow.jpg');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+}
+
+/*  TELA DO MEU NOTEBOOK  */
+
+@media (max-width:10px){
+
+    .Section1{
+
+        padding: 20px;
+        background-image: url('../images/pupito_NOTEBOOK.jpg');
+        background-size: cover; /* imagem preenche todo o cenário */
+        overflow: hidden;  /* imagem preenche todo o cenário idependente do float */
+    }
+
+}
+
+/*   ------------------------------------------- */
+
+
+/* slide fotos */
+
+.frame{
+    background-color: black;
+}
+
+.slider-frame{
+    overflow: hidden;
+    height: 755px;
+    width: 1200px;
+    margin: auto;
+    position: relative;
+
+
+
+}
+
+/* slide fotos animação */
+
+@-webkit-keyframes slide_animation{
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 1200px;}
+    30% {left: 1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left: 0px;}
+}
+
+.slide-images{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.img-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+
+}
+
+/* --------------*/
+
+
+/* slide de video */
+
+.frame1{
+    background-color: black;
+}
+
+.slider-frame1{
+    overflow: hidden;
+    height: 800px;
+    width: 1200px;
+    margin: auto;
+
+}
+
+/* slide video animação */
+
+@-webkit-keyframes slide_animation{
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 1200px;}
+    30% {left: 1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left: 0px;}
+}
+
+.slide-images1{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.img-container1{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+
+}
+
+/* -----------------*/
+
+/* foto slide / manual e automatico */
+
+.teste{
+    background-color: black;
+}
+
+
+.slider{
+    overflow: hidden;
+    height: 600px;
+    width: 1200px;
+    margin: auto;
+
+}
+
+.slides{
+
+    width: 500%;
+    height: 550px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    margin: auto;
+    position: relative;
+    top: 0px;
+    left:160px;
+    height:520px;
+    width:2200px;
+    padding:10px 140px;
+
+
+
+}
+
+/* manual */
+
+.navigation-manual{
+    position: relative;
+    width: 800px;
+    left: 17%;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.manual-btn{
+    border: 2px solid white;;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #09edfd;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -19%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -42%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -63%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -82%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -102%;
+}
+
+/* automatico */
+
+.navigation-auto{
+    position: relative;
+    left: 24%;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: red;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: red;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: red;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: red;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background-color: red;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6{
+    background-color: red;
+}
+/* -----------------*/
+
+
+/* footer  primeiro espaço com a foto do pablo */
+
+footer{
+    background-color: black;
+    padding: 40px;
+    text-align: center;
+
+}
+
+.picture{
+    width: 200px;
+    position: relative;
+    margin-left: 40px;
+    top: 200px;
+}
+
+.description{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    max-width: 40%;
+    margin-left: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: red;
+}
+
+.description p, .description h3{
+    margin-bottom: 20px;
+    color: red;
+}
+
+.description h3{
+    font-size: 60px;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* media-icons -   icone de midia social no fina da pagina */
+
+
+.media-icons{
+
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.media-icons a{
+    position: relative;
+    color: red;
+    font-size: 30px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.media-icons a:not(:last-child){
+    margin-right: 60px;
+}
+
+.media-icons a:hover{
+    transform: scale(1.5);
+}
+
+
+
+/* --------------------------------------------------------------------*/
+
+.espaço-no-final{
+    background-color: black;
+   margin: auto;
+   height: 40px;
+   width: auto;
+
+}
+
+.linkedin a{
+    background-color: black;
+    text-decoration: none;
+    position: absolute;
+    right: 10%;
+    text-align: center;
+    display: inline;
+    color: rgb(122, 124, 126);
+}
+
+
+/*  TELA DO MEU NOTEBOOK  */
+
+@media (max-width:10px){
+
+    .description{
+        display: inline-block;
+        text-align: center;
+        color: red;
+        max-width: 100%;
+        margin-left: 0px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: none;
+        font-size: 60px;
+    }
+
+    .description p, .description h3{
+        margin-bottom: 20px;
+    }
+
+    .description h3{
+        color: #f80000;
+        color: red;
+        font-size: 70px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+
+}
+
+
+/*   ------------------------------------------- */
+
+
+
+/* footer1  segundo espaço com a foto do pablo */
+
+.footer1{
+    background-color: black;
+    padding: 0px;
+    text-align: center;
+
+}
+
+.picture1{
+    width: 160px;
+}
+
+.description1{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    max-width: 40%;
+    color: red;
+    margin-left: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.description1 p, .description1 h3{
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: red;
+}
+
+.description1 h3{
+    display: inline-block;
+    font-size: 40px;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+/* footer3  terceiro espaço com a foto do pablo */
+
+.footer3{
+    background-color: black;
+    padding: 0px;
+    text-align: center;
+
+
+}
+
+.picture3{
+    width: 160px;
+}
+
+.description3{
+    display: inline-block;
+    text-align: center;
+    color: red;
+    max-width: 100%;
+    margin-left: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.description3 p, .description3 h3{
+    margin-bottom: 20px;
+}
+
+.description3 h3{
+    font-size: 60px;
+    font-family: 'Kaushan Script', cursive;
+
+}
+
+
+/*  TELA DO MEU NOTEBOOK  */
+
+@media (max-width:10px){
+
+    .description3{
+        display: inline-block;
+        text-align: left;
+        color: red;
+        max-width: 100%;
+        margin-left: 0px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+    .description3 p, .description3 h3{
+        margin-bottom: 20px;
+    }
+
+    .description3 h3{
+        font-size: 45px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/*   ------------------------------------------- */
+
+
+/* footer10 -   icone de midia social no fina da pagina */
+
+/*
+.footer10{
+    background-color: white;
+    padding: 1px;
+    height: 97%;
+    width: 100%;
+
+    text-align: center;
+
+}
+
+.picture10{
+    width: 40px;
+    margin: 5px;
+}
+*/
+
+/* --------------------------------------------------------------------*/
+
+
+/* media-icons -   icone de midia social no fina da pagina */
+
+
+.media-icons{
+
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.media-icons a{
+    position: relative;
+    color: red;
+    font-size: 30px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.media-icons a:not(:last-child){
+    margin-right: 60px;
+}
+
+.media-icons a:hover{
+    transform: scale(1.5);
+}
+
+
+
+/* --------------------------------------------------------------------*/
+
+.espaço-no-final{
+    background-color: black;
+   margin: auto;
+   height: 40px;
+   width: auto;
+
+}
+
+.linkedin a{
+    background-color: black;
+    text-decoration: none;
+    position: absolute;
+    right: 10%;
+    text-align: center;
+    display: inline;
+    color: rgb(122, 124, 126);
+}
+
+
+
+
+/*     videos      */
+.video{
+    overflow: hidden;
+    height: 700px;
+    width: 1200px;
+    margin-left: 360px;
+    display: inline;
+}
+
+
+
+</style>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<!--
+<h1>NETFLIX</h1>
+<div class="wrapper">
+  <section id="section1">
+    <a href="#section3" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="https://occ-0-1567-1123.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRvngexxF8H1-OzRWFSj6ddD-aB93tTBP9kMNz3cIVfuIfLEP1E_0saiNAwOtrM6xSOXvoiSCMsihWSkW0dq808-R7_lBnr6WHbjkKBX6I3sD0uCcS8kSPbRjEDdG8CeeVXEAEV6spQ.webp" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABZEK-7pZ1H5FD4cTyUb9qB_KeyJGz5p-kfPhCFv4GU_3mbdm8Xfsy4IBchlG9PFNdGff8cBNPaeMra72VFnot41nt0y3e8RLgaVwwh3UvyM2H2_MkmadWbQUeGuf811K7-cxJJh7gA.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABQCoK53qihwVPLRxPEDX98nyYpGbxgi5cc0ZOM4iHQu7KQvtgNyaNM5PsgI0vy5g3rLPZdjGCFr1EggrCPXpL77p2H08jV0tNEmIfs_e8KUfvBJ6Ay5nM4UM1dl-58xA6t1swmautOM.webp" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABbcCX42tsqGbBvO2y9CQv5-7QvYbCfoHtXsuc6NPCtZaKa4l4fBX3XWvUwG9F2A3CTsNpHVmulxBbdXKwK8Q6xGjejd9FoadGkZ7CnGrSl601TOQjzSHJ23NuIPC8j0QMGORL4uRIA.jpg" alt="Describe Image">
+  </div>
+    <a href="#section2" class="arrow__btn">›</a>
+  </section>
+  <section id="section2">
+    <a href="#section1" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABVopDZ5Fy9_fk_HO5WxHTXKKjKhtWFupbSjuvPwfLK_vytzon4EwRUdGgYJ34JwPxOTK_NkV3aXfkULMB0Dcct-FyfqzH-X44VXuRMp4QeBHlvKwWeZFpZlGdItPzmmg4scmwhG7SQ.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTOj1-116yVcgKWMU2dI3GFR4x0fSkiGsqtLLeLUxRR7STaksjAqBTrYlTfrB8nIGnGvXksi0ewXAhVGg6-pLxpFOIfcpjK-pf8D5xehFZo5a6vJbo4L0AGbrzglbyUoq255QBJgRQ.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABd3IBDpxbRcHXvRMFCZeKa2aHLU1P4SJtrACMS9om3yhLjqPlvNlmR_fypPxjtbsbnKaC4JZhPSpDG4r_kdxSHHAltWguMcCB-1Y1OShr2zWfUv7Whf_39fNH5ZJ3_0gxQrs0akmQjQz44_LT7jXH5LMZ7iMBAzac5IEj4m7Fn_5OWEGYnVsDsKG-QTommDooULMDF9bEw.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABXSd7bhDddcwkq9XpksoQFCHVx29Sxl_h4hb2n3F2GIt32a4XWcOnctQfgnT5qdolv8UML6_xNB5CJ89h56wueb13mYmEBr0sx5e9iLPdtVcOQAOmKXKWHHXwFvJuCUwuNnL3s8eAQwqLXPVMHMEsujM684rUGrZNF2btN2GRy5-RyEslsxZO93V2Q_H2bWs8A8oayt1h5M.webp" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABbXWODpAWqVXcmmjMA7K-2mPkQpvwCLfSdeyhVXzR8A3MSpdSEnnjf4HEJJTYC-TnktU6njTUGAxmzWEYCaJbk4v_ZeL-7QGzmkvYBjg_N-evr2XmcX-Fanoyvu_nimFP4iigPe4O3Vr_WcgplhwkDrJwPUJa84wRLrNAx3TufN5V7cWRP4indqu5HQahvgFEqfL9zjp4g.jpg" alt="Describe Image">
+  </div>
+    <a href="#section3" class="arrow__btn">›</a>
+  </section>
+  <section id="section3">
+    <a href="#section2" class="arrow__btn">‹</a>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRr4YxdaABuAuH_3FmSQZn7BCvLp-UUPsXE9MiYpvFP3CSUHV2zOew5oVqKqqdaOd3tbFVS0Uf67uIs7_eZydlCghg4nK0nMatRpPImABwTOhnNzCLCxdKrua7pPIcPCZqBYTeAO5g.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTyWK1MKaw8GcObtz47R2Tj7wkLJ7qQu9tk6TVpcoyxpzD4B-zZ569bQ5vGrREBL-MWFkGilXUwy7tCDaj2XOGkUB4RsbbFAmp9NgSr6lygMpUGNHSlyfrFbUORsRkrxSIoh_ggOvg.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABY7NwkWEJIfXsn6t3Li4bGSCQ1nEErPisI5ZZtXlC-_VRBZOUrhWK5X3vt3t6SR_cpgVhCwxgQqFFDJhk62Kk8hawOnYGZMr0LKeLczMFV2zalCFjkcdLksvT4HB2LEi6LFyruyk3Uu0LmNGsHfC2A8Bly60smr_3sDbz4RruXcklPOG1qYq9wUVu3zfaiwNvqmG4b8aFA.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABemXHOga9feFnOux6I2YyACBD94wvM7N3vcTGIfMpQ_BcaXeoeM9XyzdVdamKtxt0SHXZfvsl6czcp3E48tXMLtHBxuQsh1BjHtPGgJDZ81je_FjItINiqzLtir0A30s_e4KR8G3d7AYAPDjZVOY97bNpzNqtkcHcGp7fGnJByVCps1uLfG9U9tK3Ma1A_3JbRt0NiT2_Q.jpg" alt="Describe Image">
+  </div>
+    <div class="item">
+    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABVxuRB932hvre-XP0gh6ar5ztoR3Oe3QjKHkyvcDnRak2MKXOrx5H7mFQSvggefMFOppwEs7ZCCpiqrJ_CYGvtvYB9NpU4SWUtNO6uV2u-DTID267AcHjHcGvGBQJ1ufddDkxcGOZyi5MlOQ5QUmBun4652FbYUnib3zMYQDgcna_Pvz8y_HO5fbokxezrRR1JZAAiqFSQ.jpg" alt="Describe Image">
+  </div>
+    <a href="#section1" class="arrow__btn">›</a>
+  </section>
+</div>
+
+-->
+<!--
+    <a href="http://127.0.0.1:5500/index.html">
+        <div class="logo">
+
+        </div>
+    </a>
+-->
+    <!--
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">
+
+
+        <div class="bt_menu" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+    </label>
+-->
+
+
+
+
+    <Section>
+
+        <div class="nome">
+
+            <img class="picturePP" src="{% static 'images/homeprincipal1.png' %}" >
+
+            <div class="footerPP">
+
+                <div class="descriptionPP">
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </Section>
+
+
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+            name="b_b8591ccffaf2b37f26c115c2d_8d1381ed15" tabindex="-1" value=""></div>
+    <footer>
+            <div class="description3">
+            <h3>Encontros presenciais</h3>
+            </div>
+
+    </footer>
+
+    <div class="frame">
+        <div class="slider-frame">
+            <div class="slide-images">
+                <div class="img-container">
+                    <img src="{% static 'images/midia23.jpg' %}">
+                </div>
+                <div class="img-container">
+                    <img src="{% static 'images/midia40.jpg' %}">
+                </div>
+                <div class="img-container">
+                    <img src="{% static 'images/midia42.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer1">
+        <div class="description3">
+            <br><br>
+            <h3>Comunhão</h3>
+        </div>
+    </footer>
+
+
+
+    <div class="frame1">
+        <div class="slider-frame1">
+            <div class="slide-images1">
+                <video class="img-container1" src=" {% static 'images/vid4.mp4' %} " autoplay muted
+                    loop></video>
+                <video class="img-container1" src="{% static 'images/vid2.mp4' %}" autoplay muted
+                    loop></video>
+                <video class="img-container1" src="{% static 'images/vid3.mp4' %}" autoplay muted
+                    loop></video>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="videos">
+        <video class="video" src="./images/APRESENTAÇÃO DO NOVO APP AD CAMPO GRANDE.mp4" autoplay muted loop></video>
+
+    </div>
+-->
+
+
+
+
+
+
+    <div>
+        <footer class="footer3">
+            <div class="description3"><br><br><br>
+                <h3>Acompanhe a programação do Mês</h3>
+
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+    <!-- image slider start-->
+    <div class="teste">
+        <div class="slider">
+            <div class="slides">
+                <!-- radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <!-- radio buttons end-->
+                <!-- slide images start-->
+               <div class="slide first">
+                    <img src="{% static 'images/anun5.jpeg' %}" alt="">
+                </div>
+                <div class="slide">
+                     <img src="{% static 'images/anuncio2.png' %}" alt="">
+                </div>
+                <div class="slide">
+                     <img src="{% static 'images/anun3.jpeg' %}" alt="">
+                </div>
+                <div class="slide">
+                     <img src="{% static 'images/1.jpg' %}" alt="">
+                </div>
+                <div class="slide">
+                     <img src="{% static 'images/anuncio1.png' %}" alt="">
+                </div>
+                <div class="slide">
+                     <img src="{% static 'images/2.jpg' %}" alt="">
+                </div>
+                <!-- slide images end-->
+                <!-- automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                </div>
+                <!-- automatic navigation end-->
+            </div>
+            <!-- manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+            </div>
+            <!-- manual navigation end-->
+        </div>
+        <!-- image slider end-->
+    </div>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 6) {
+                counter = 1;
+            }
+        }, 8000);
+    </script>
+
+
+    <!--
+    <div>
+        <footer class="footer10">
+            <a href="https://www.facebook.com/search/top?q=assembleia%20de%20deus%20campo%20grande" target="_blank">
+                <img class="picture10" src="./images/facebook.png"></a>
+            <a href="https://www.youtube.com/c/ADCampoGrande" target="_blank"><img class="picture10"
+                    src="./images/Youtube.png"></a>
+            <a href="https://www.instagram.com/adcampogrande/" target="_blank"><img class="picture10"
+                    src="./images/Insta.png"></a>
+
+        </footer>
+    </div>
+
+     -->
+
+    <div class="media-icons">
+        <a href="https://www.facebook.com/search/top?q=assembleia%20de%20deus%20campo%20grande" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/adcampogrande/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/c/ADCampoGrande" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://chat.whatsapp.com/J2HmDYHYZiNKhWEJaN6wqr" target="_blank"><i class='fab fa-whatsapp fa-1x'></i></a>
+
+
+    </div>
+
+
+
+
+    <footer class=" px-5 py-10 ">
+        <ul class="flex justify-between items-center">
+
+
+
+            <li><a href="https://www.linkedin.com/in/j%C3%A9ssica-barbosa-79251a1ba/"
+                target="_black"><img src="{% static 'images/LOGOJB1.png' %}" class="w-8/12" alt=""></a> </li>
+
+             <li> <i class="fab fa-python fa-2x fa-spin "></i></li>
+
+            <li><a href="https://www.linkedin.com/in/pablo-henrique-silva-b71202169/"
+                target="_black"><img src="{% static 'images/pablo.png' %}" class="w-8/12" alt=""></a> </li>
+
+
+        </ul>
+    </footer>
+
+
+
+{% endblock %}
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styte.css">
+    <link rel="stylesheet" href="https://unpkg.com/swipe/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swipe/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swipe/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <h1>Netflix</h1>
+    <div class="Netflix">
+        <h2>Os melhores Filmes</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="Netflix">
+         <h2>As melhores Series</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+                <div class="swiper-slide"><img src="1.png" alt="Move"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            sliderPerView: 6,
+            spaceBetween:40,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlack: true,
+            pagination:{
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+              nextE1: '.swiper-button-next',
+              prevE1: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
+
+-->
